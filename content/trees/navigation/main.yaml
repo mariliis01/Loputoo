@@ -1,0 +1,30 @@
+tree:
+  -
+    id: ae84904c-b9ed-4ee3-bbc3-ae5c00feab7c
+    entry: home
+  -
+    id: 5611d85b-6394-4253-b6ca-b10ef31c12b9
+    title: Products
+    url: '#'
+    children:
+      -
+        id: b55fd991-3bba-40d9-9050-492b61708c84
+        entry: be8ed79a-347e-44fd-8182-abec66f3dc87
+      -
+        id: 7a00e437-e740-492d-8ac5-6258f5a67e77
+        entry: d61749ed-95b5-425b-bfc0-60cb39921a46
+  -
+    id: 0d394cfc-013d-47c6-a12a-a992e077d846
+    entry: 20f6a148-63b8-47a8-9b0e-d57095d78c21
+    title: Achievements
+  -
+    id: 3a62fd9f-2143-4e64-8da2-af5f5fb3dbcc
+    entry: c7268ed3-e874-42d8-b14c-9e3b1df37063
+    title: Blog
+  -
+    id: 7185b1e8-9e93-44eb-9d54-5869c1f8e4fd
+    entry: 5c526dbf-9dd7-4c52-98d8-54e00ebddfb6
+    title: Contact
+  -
+    id: eff0400e-ccf6-4a00-8c9d-ebd095c5cd17
+    entry: f6414361-0fac-4091-9aec-8004b8702d04

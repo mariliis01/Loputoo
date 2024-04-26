@@ -1,0 +1,17 @@
+title: Contact
+honeypot: fax
+email:
+  -
+    id: XQsJPLTT
+    to: kaia@babycoolfood.com
+    reply_to: '{{ email }}'
+    subject: '{{ trans:strings.form_subject_received }}'
+    html: email/form_owner
+    text: email/form_owner_text
+  -
+    id: dJZUFLO1
+    to: '{{ email }}'
+    reply_to: kaia@babycoolfood.com
+    subject: '{{ trans:strings.form_subject_sent }}'
+    html: email/form_sender
+    text: email/form_sender_text

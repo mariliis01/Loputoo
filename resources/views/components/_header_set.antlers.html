@@ -1,0 +1,7 @@
+<section class="fluid-container grid grid-cols-12">
+    {{ partial:typography/prose as="article" class="contents" }}
+    {{ article }}
+    {{ partial src="components/{type}" }}
+    {{ /article }}
+    {{ /partial:typography/prose }}
+</section>

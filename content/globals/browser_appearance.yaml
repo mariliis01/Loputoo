@@ -1,0 +1,17 @@
+title: 'Browser appearance'
+data:
+  disable_telephone_detection: false
+  disable_email_detection: false
+  disable_address_detection: false
+  use_theme_color: true
+  use_theme_color_dark_mode: false
+  theme_color: '#98D6CE'
+  apple_mobile_web_app: true
+  apple_status_bar_black: true
+  android_mobile_web_app: true
+  use_favicons: true
+  svg: bc-logo-valge.webp
+  ios_color: '#FFFFFF'
+  safari_icon: bc-logo-valge.webp
+  apple_touch_icon: bc-logo-valge.webp
+  android_chrome: bc-logo-valge.webp

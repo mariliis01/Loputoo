@@ -1,0 +1,25 @@
+{{ if label }}
+    <{{ as or 'a' }}
+        {{ slot:attributes }}
+        class="
+            underline decoration-2 focus:outline-none focus-visible:ring focus-visible:ring-offset-2
+            {{ if button_type === 'inline' }}
+                underline motion-safe:transition
+                {{ inverted
+                    ? 'text-white decoration-white focus-visible:ring-white'
+                    : 'text-gray-900 focus-visible:ring-teal-200'
+                }}
+            {{ else }}
+                inline-flex items-center py-3 px-4 rounded leading-none no-underline select-none whitespace-nowrap motion-safe:transition
+                {{ inverted
+                    ? 'bg-white text-gray-900 focus-visible:ring-white'
+                    : 'bg-white'
+                }}
+            {{ /if }}
+            {{ class }}
+        "
+        {{ !faux ?= { partial:snippets/button_attributes } }}
+    >
+        {{ link_type == 'email' ? { label | obfuscate_email } : label }}
+    </{{ as or 'a' }}>
+{{ /if }}

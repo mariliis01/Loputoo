@@ -1,0 +1,191 @@
+sections:
+  social_media:
+    display: 'Social Media'
+    fields:
+      -
+        handle: section_social
+        field:
+          type: section
+          listable: hidden
+          display: 'Social media links'
+      -
+        handle: social_media
+        field:
+          sets:
+            email:
+              display: Email
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    display: Email
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'mailto:'
+            facebook:
+              display: Facebook
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: '://www.facebook.com/'
+                    display: Handle
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.facebook.com/'
+            github:
+              display: GitHub
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'http://www.github.com/'
+                    display: Handle
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.github.com/'
+            instagram:
+              display: Instagram
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'http://www.instagram.com/'
+                    display: Handle
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.instagram.com/'
+            linkedin:
+              display: LinkedIn
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'http://www.linkedin.com/'
+                    display: Handle
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.linkedin.com/'
+            mastodon:
+              display: Mastodon
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    display: URL
+                    validate: required
+            pinterest:
+              display: Pinterest
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'htts://www.pinterest.com/'
+                    display: URL
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.pinterest.com/'
+            twitter:
+              display: Twitter
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'http://www.twitter.com/'
+                    display: Handle
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.twitter.com/'
+            vimeo:
+              display: Vimeo
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'http://www.vimeo.com/'
+                    display: Handle
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.vimeo.com/'
+            youtube:
+              display: YouTube
+              fields:
+                -
+                  handle: handle
+                  field:
+                    input_type: text
+                    type: text
+                    localizable: true
+                    listable: hidden
+                    prepend: 'http://www.youtube.com/'
+                    display: Handle
+                    validate: required
+                -
+                  handle: prefix
+                  field:
+                    type: hidden
+                    default: 'http://www.youtube.com/'
+          type: replicator
+          listable: hidden
+          localizable: true
+          display: 'Social media'

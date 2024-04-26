@@ -1,0 +1,32 @@
+@layer base {
+  
+  @font-face {
+    font-family: 'Raleway';
+    src: url('/public/fonts/Raleway.ttf') format('ttf');
+    font-weight: 400;
+    font-style: normal;
+  }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+::marker{
+  color: aqua;
+}

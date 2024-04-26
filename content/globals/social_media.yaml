@@ -1,0 +1,27 @@
+title: 'Social media'
+data:
+  social_media:
+    -
+      id: lc7nf1b6
+      handle: babycoolfood
+      prefix: 'https://www.facebook.com/'
+      type: facebook
+      enabled: false
+    -
+      id: lc7nfryo
+      handle: babycoolfood/
+      prefix: 'https://www.instagram.com/'
+      type: instagram
+      enabled: true
+    -
+      id: lc9071sb
+      handle: company/babycool
+      prefix: 'https://www.linkedin.com/'
+      type: linkedin
+      enabled: true
+    -
+      id: lc90n7n4
+      handle: channel/UCvjQ0ONRfLzHteVIMNkofSw/featured
+      prefix: 'https://www.youtube.com/'
+      type: youtube
+      enabled: true

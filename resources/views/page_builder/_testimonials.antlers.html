@@ -1,0 +1,46 @@
+<section class="fluid-container">
+    <div class="grid grid-cols-1 lg:grid-cols-2 justify-center overflow-hidden">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                {{ replicator_field }}
+                <div class="swiper-slide md:px-4">
+                    <div class="flex flex-col p-6">
+                        <div class="flex gap-4 border-b pb-4 h-full">
+                            <figure class="
+                            not-prose
+                            {{ switch(
+                                (size == 'md') => 'w-20',
+                                () => 'size-md'
+                            )}}
+                        ">
+                                {{
+                                partial:components/picture
+                                :image="image"
+                                class="w-full rounded-full h-20 object-contain"
+                                cover="false"
+                                lazy="true"
+                                sizes="
+                                {{ switch(
+                                (size == 'md') => '(min-width: 1280px) 640px, (min-width: 768px) 50vw, 90vw',
+                                () => '100vw'
+                                )}}
+                                "
+                                }}
+                                {{ partial:typography/caption as="figcaption" }}
+                            </figure>
+                            <div class="flex items-center text-lg font-semibold">{{ title }}</div>
+                        </div>
+                        <div class="pt-2">
+                            {{ partial:typography/prose as="article" }}
+                            {{ article }}
+                            {{ partial src="components/{type}" }}
+                            {{ /article }}
+                            {{ /partial:typography/prose }}
+                        </div>
+                    </div>
+                </div>
+                {{ /replicator_field }}
+            </div>
+        </div>
+    </div>
+</section>

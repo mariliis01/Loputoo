@@ -1,0 +1,33 @@
+<div class="fluid-container">
+    <p class="flex justify-center text-[21px] pb-16 text-gray-900 font-semibold">{{ title }}</p>
+    <div class="flex flex-col md:flex-row flex-wrap gap-y-8 lg:gap-y-16 md:items-baseline justify-center">
+        {{ replicator }}
+        <div class="flex flex-col md:w-1/3 md:px-4">
+            <div class="flex justify-center">
+                <img 
+            src="{{ glide:image 
+            fit="crop_focal" :bg="bg" :blur="blur" :brightness="brightness" :contrast="contrast" :filter="filter" :gamma="gamma" :pixelate="pixelate" :sharpen="100" quality="{ quality ?? '10' }"}}"
+            class="
+                {{ switch(
+                    (size == 'md') => 'h-20 w-20 bg-teal-100/20 rounded-full aspect-square p-2',
+                    (size == 'lg') => 'w-20 h-20 aspect-square p-4',
+                    () => 'size-md'
+                )}}
+            "
+            cover="true"
+            lazy="true"
+            alt="babycool product icons"
+            >
+            </div>
+            <div class="text-center pt-6">
+                <p class="font-bold text-lg pb-2">{{ caption }}</p>
+                {{ partial:typography/prose as="article" class="" }}
+                {{ article }}
+                {{ partial src="components/{type}" }}
+                {{ /article }}
+                {{ /partial:typography/prose }}
+            </div>
+        </div>
+        {{ /replicator }}
+    </div>
+</div>

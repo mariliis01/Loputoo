@@ -1,0 +1,37 @@
+<section class="fluid-container">
+    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 lg:space-x-0 sm:justify-around">
+        {{ replicator_field }}
+        <div class="">
+        <figure class="
+            not-prose
+            {{ switch(
+                (size == 'md') => 'w-20 h-20',
+                () => 'size-md'
+            )}}
+        ">
+            {{
+                partial:components/picture
+                :image="image"
+                class="w-full rounded-full"
+                cover="false"
+                lazy="true"
+                sizes="
+                    {{ switch(
+                    (size == 'md') => '(min-width: 1280px) 640px, (min-width: 768px) 50vw, 90vw',
+                    () => '100vw'
+                    )}}
+                "
+            }}
+            {{ partial:typography/caption as="figcaption" }}
+        </figure>
+        <div class="flex flex-col pt-8">
+            {{ partial:typography/prose as="article" class="prose-h4:" }}
+            {{ article }}
+            {{ partial src="components/{type}" }}
+            {{ /article }}
+            {{ /partial:typography/prose }}
+        </div>
+        </div>
+        {{ /replicator_field }}
+    </div>
+</section>

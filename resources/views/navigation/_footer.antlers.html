@@ -1,0 +1,24 @@
+<nav class="flex flex-col space-y-4 items-center space-x-4 text-base font-semibold justify-center">
+    <ul class="flex items-center space-x-12">
+        {{ nav:footer max_depth="2" include_home="true" select="title|url" }}
+        <li {{ if children }} x-data="{ subnavOpen: false }" @keyup.escape.stop.prevent="subnavOpen = false" @focusin.window="!$refs.subnav.contains($event.target) && (subnavOpen = false)" {{ /if }} class="relative leading-none">
+            <a class="
+                        flex items-center text-[16px] font-bold hover:text-gray-800/80 focus:outline-none focus-visible:ring-2
+                        {{ is_current || is_parent
+                            ? 'text-gray-900/80'
+                            : 'text-gray-900' }}
+                    " {{ if children }} href="#" @click.prevent="subnavOpen = !subnavOpen" :aria-label="subnavOpen
+                            ? '{{ trans:strings.subnav_close }}'
+                            : '{{ trans:strings.subnav_open }}'" :aria-expanded="subnavOpen" {{ else }} href="{{ url }}" {{ /if }}>
+                {{ title }}  
+                {{ if children }}
+                <div :class="{ 'scale-y-[-1]': subnavOpen }" class="motion-safe:transition-transform ">
+                    {{ svg:chevron_down class="w-2 ml-1 overflow-visible stroke-current" aria-hidden="true" }}
+                </div>
+                {{ /if }}  
+            </a>
+        </li>
+        {{ /nav:footer }}
+    </ul>
+    {{ yield:reset_cookie_consent }}
+</nav>

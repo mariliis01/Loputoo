@@ -1,0 +1,39 @@
+<section class="bg-teal-100 -mt-8 lg:-mt-16 py-12 relative overflow-hidden">
+    <div class="hidden lg:block absolute h-[100vh] w-[80vw] bottom-10 lg:left-[60%] z-0" style="background-image: url(/images/bg.webp); rotate: 45deg;"></div>
+    <div class="fluid-container flex flex-col sm:flex-row w-full gap-4 relative">
+        <div class="flex flex-col justify-center">
+            {{ partial:typography/prose as="article" class="contents" }}
+            {{ article }}
+            {{ partial src="components/{type}" }}
+            {{ /article }}
+            {{ /partial:typography/prose }}
+        </div>
+        <figure class="
+                not-prose
+                {{ switch(
+                    (size == 'md') => 'size-md',
+                    (size == 'lg') => 'size-lg',
+                    (size == 'xl') => 'size-xl',
+                    () => 'size-md'
+                )}}
+            ">
+            {{
+            partial:components/picture
+            :image="image"
+            class="w-[1613px] max-h-[968px] aspect-auto rounded-lg"
+            cover="false"
+            lazy="false"
+            sizes="
+            {{ switch(
+            (size == 'md') => '(min-width: 1280px) 640px, (min-width: 768px) 50vw, 90vw',
+            (size == 'lg') => '(min-width: 1280px) 960px, (min-width: 768px) 75vw, 90vw',
+            (size == 'xl') => '(min-width: 1280px) 1330px, 90vw',
+            () => '100vw'
+            )}}
+            "
+            }}
+        
+            {{ partial:typography/caption as="figcaption" }}
+        </figure>
+    </div>
+</section>

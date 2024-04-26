@@ -1,0 +1,32 @@
+title: SEO
+data:
+  site_name: 'BabyCool – Baby Food for Our New Generation'
+  noindex_local: true
+  noindex_staging: true
+  noindex_production: true
+  collection_defaults:
+    -
+      id: lcofwzah
+  hreflang_auto: true
+  json_ld_type: organization
+  organization_name: Babycool
+  organization_logo: babycool_ikoonid-26.png
+  breadcrumbs: false
+  use_social_image_generation: false
+  sitemap_collections:
+    - pages
+  trackers_local: true
+  trackers_staging: false
+  trackers_production: true
+  use_google_site_verification: false
+  use_fathom: false
+  use_plausible: false
+  use_cloudflare_web_analytics: false
+  tracker_type: gtag
+  google_analytics: G-BDF634VD48
+  anonymize_ip: false
+  use_cookie_banner: true
+  embeds: true
+  hide_by_default: false
+  display_style: left
+  cookie_revoke_before: '2023-01-11'

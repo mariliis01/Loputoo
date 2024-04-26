@@ -1,0 +1,9 @@
+<!-- /page_builder/_article.antlers.html -->
+<section class="mx-8 lg:mx-0 lg:fluid-container">
+    {{ partial:typography/prose as="article" class="contents" }}
+        {{ article }}
+            {{ partial src="components/{type}" }}
+        {{ /article }}
+    {{ /partial:typography/prose }}
+</section>
+<!-- End: /page_builder/_article.antlers.html -->

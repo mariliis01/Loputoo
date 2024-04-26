@@ -1,0 +1,51 @@
+<section>
+    <div class="fluid-container flex flex-col lg:grid grid-cols-12 py-8 border-t-2 border-teal-100">
+        <div class="grid col-start-1 md:col-start-1 col-span-4 pt-3">
+            <h2 class="text-gray-900 text-xl pb-2">Contact us</h2>
+            <p>BabyCool Ltd </p>
+            <p>Ülejõe 22</p>
+            <p>Nasva, Saaremaa</p>
+            <p>Estonia, EU</p>
+            <p>VAT no. EE101984423</p>
+        </div>
+        <div class="lg:grid col-start-5 col-span-3">
+            <div class="flex items-center mt-4 gap-4">
+                <img class="w-20 h-20" src="./images/kaia_sink_contact.png" alt="">
+                <div class="flex flex-col justify-center">
+                    <p>Kaia Sink</p>
+                    <a class="underline" href="mailto:kaia@babycoolfood.com">kaia@babycoolfood.com</a>
+                    <a class="underline" href="tel:+37256568897">+372 5656 8897</a>
+                </div>
+            </div>
+        </div>
+        <div class="grid col-start-8 md:col-start-10 col-span-5">
+            <img class="object-contain aspect-video lg:h-40 lg:w-72" src="images/babycool_eu_agriculture.webp" alt="Agriculture">
+        </div>
+    </div>
+</section>
+<footer class="w-full pb-4 mt-auto">
+    <div class="fluid-container flex flex-col space-y-4 justify-center">
+        <div class="flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-4">
+            <div class="mx-auto -my-20">
+                <img class="w-96 aspect-video object-contain" src="/images/bc_grow-02.svg" alt="Grow_Together">
+            </div>
+        </div>
+        {{ if social_media:social_media }}
+            <div class="flex space-x-12 justify-center py-8">
+                {{ social_media:social_media }}
+                    <a class="flex justify-center items-center h-12 w-12 p-1 -m-1 text-gray-900 bg-teal-100/80 rounded-full" href="{{ prefix }}{{ handle }}" rel="noopener{{ type == 'mastodon' ?= ' me' }}" aria-label="{{ config:app:name }} {{ trans:strings.on }} {{ type | title }}" target="_blank">{{ svg :src="type" class="w-6 lg:w-4 h-6 lg:h-4 overflow-visible fill-teal-200" alt="" aria-hidden="true" }}</a>
+                {{ /social_media:social_media }}
+            </div>
+        {{ /if }}
+        <div class="flex flex-col justify-center">
+            {{ partial:navigation/footer }}
+        </div>
+        <p class="flex justify-center text-gray-500 font-light text-xs">
+            &copy; {{ configuration:copyright_since }}
+            {{ unless (now | format('Y')) == configuration:copyright_since }}
+            - {{ now | format('Y') }}
+            {{ /unless }}
+            {{ configuration:copyright_name ?? config:app:name }}
+        </p>
+    </div>
+</footer>

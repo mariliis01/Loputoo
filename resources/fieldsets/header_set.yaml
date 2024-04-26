@@ -1,0 +1,6 @@
+title: Header_Set
+fields:
+  -
+    import: article
+  -
+    import: figure

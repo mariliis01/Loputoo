@@ -1,0 +1,24 @@
+title: Contact
+fields:
+  -
+    handle: replicator_field
+    field:
+      collapse: false
+      previews: false
+      sets:
+        kontakti_kaart:
+          display: 'Kontakti kaart'
+          fields:
+            -
+              import: figure
+            -
+              import: article
+      display: 'Replicator Field'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      duplicate: false
+      max_sets: 6

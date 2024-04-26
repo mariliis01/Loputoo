@@ -1,0 +1,128 @@
+title: 'Page builder'
+fields:
+  -
+    handle: page_builder
+    field:
+      type: replicator
+      localizable: true
+      collapse: true
+      listable: false
+      display: 'Page builder'
+      instructions: 'Build your page by using various predefined content models.'
+      sets:
+        article:
+          display: Article
+          instructions: 'Long form content, can be expanded with media like figures, video, quotes or tables.'
+          fields:
+            -
+              import: article
+        contact:
+          display: contact
+          fields:
+            -
+              import: contact
+        form:
+          display: Form
+          instructions: 'Show a form.'
+          fields:
+            -
+              import: form
+        header:
+          display: Header
+          fields:
+            -
+              import: header_set
+        index_content:
+          display: 'Index content'
+          instructions: 'Render the currently mounted entries if available.'
+          fields:
+            -
+              import: index_content
+        link_blocks:
+          display: 'Link blocks'
+          instructions: 'Show link blocks.'
+          fields:
+            -
+              import: link_blocks
+        main_page_logo:
+          display: 'Logo Icons'
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: Title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              handle: replicator
+              field:
+                collapse: false
+                previews: true
+                sets:
+                  new_set:
+                    display: 'New Set'
+                    fields:
+                      -
+                        import: figure
+                      -
+                        import: article
+                display: 'Replicator Field'
+                type: replicator
+                icon: replicator
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+        testimonials:
+          display: Testimonials
+          fields:
+            -
+              import: testimonials
+        text_with_sidebar:
+          display: 'Text With Sidebar'
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              import: article
+            -
+              import: figure
+        text_with_sidebar_reverse:
+          display: 'Text With Sidebar Reverse'
+          fields:
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              import: figure
+            -
+              import: article
+      instructions_position: above
+      visibility: visible
+      always_save: false
+      previews: true

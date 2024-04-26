@@ -1,0 +1,17 @@
+{{ trans:strings.form_mail_body_owner }} ({{ trans:strings.form_mail_title }})
+-
+{{ fields }}
+{{ if handle !== 'consent' }}
+{{ trans :key="display" :locale="locale" }}:
+{{ if (value | is_array) }}
+{{ value }}
+{{ value }}
+{{ /value }}
+{{ else }}
+{{ value }}
+{{ /if }}
+{{ /if }}
+{{ /fields }}
+-
+{{ trans:strings.form_mail_submitted }} {{ now | timezone | format('r') }}
+{{ trans:strings.form_mail_from }}

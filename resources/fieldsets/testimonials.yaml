@@ -1,0 +1,34 @@
+title: Testimonials
+fields:
+  -
+    handle: replicator_field
+    field:
+      collapse: false
+      previews: true
+      sets:
+        new_set:
+          display: 'New Set'
+          fields:
+            -
+              import: figure
+            -
+              handle: title
+              field:
+                input_type: text
+                antlers: false
+                display: title
+                type: text
+                icon: text
+                listable: hidden
+                instructions_position: above
+                visibility: visible
+                always_save: false
+            -
+              import: article
+      display: 'Replicator Field'
+      type: replicator
+      icon: replicator
+      listable: hidden
+      instructions_position: above
+      visibility: visible
+      always_save: false

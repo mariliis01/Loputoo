@@ -1,0 +1,15 @@
+{{ if buttons }}
+    {{ if type == 'buttons' }}
+        <div class="size-md flex flex-wrap gap-3 not-prose">
+            {{ buttons }}
+                {{ partial:components/button }}
+            {{ /buttons }}
+        </div>
+    {{ else }}
+        <div class="flex flex-wrap gap-3 {{ class }}">
+            {{ buttons }}
+                {{ partial:components/button :inverted="inverted" class="" }}
+            {{ /buttons }}
+        </div>
+    {{ /if }}
+{{ /if }}

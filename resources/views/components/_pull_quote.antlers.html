@@ -1,0 +1,22 @@
+<figure
+    class="
+        not-prose
+        {{ switch(
+            (size == 'md') => 'size-md',
+            (size == 'lg') => 'size-lg',
+            (size == 'xl') => 'size-xl',
+            () => 'size-md'
+        )}}
+    "
+>
+<div class="flex flex-col space-y-4 lg:space-y-8">
+    <blockquote class="flex justify-center text-2xl lg:text-[36px] tracking-tighter leading-tight text-teal-200">
+        <span >&OpenCurlyDoubleQuote;{{ quote | nl2br | widont}}&CloseCurlyDoubleQuote;</span>
+    </blockquote>
+    {{ if author }}
+        <figcaption class="flex justify-center text-gray-900">
+            <span class="font-light text-base lg:text-lg">{{ author }}</span>
+        </figcaption>
+    {{ /if }}
+    </div>
+</figure>

@@ -1,0 +1,53 @@
+<!-- /blog/index.antlers.html -->
+<main class="outer-grid" id="content">
+    {{ page_builder scope="block" }}
+        {{ partial src="page_builder/{type}" }}
+    {{ /page_builder }}
+</main>
+<!-- End: /blog/index.antlers.html -->
+
+{{ section:index_content }}
+    <!-- /blog/index.antlers.html -->
+    <section class="fluid-container">
+        {{ collection:blog sort="order" paginate="true" limit="10" as="items" }}
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-16">
+            {{ unless no_results }}
+            {{ items }}
+            <a href="{{ url }}" class="flex flex-col group transition duration-300 ease-in-out">
+                <figure class="
+                        not-prose
+                        {{ switch(
+                            (size == 'md') => 'max-w-full object-contain aspect-video',
+                            () => 'size-md'
+                        )}}
+                    ">
+                    {{
+                    partial:components/picture
+                    :image="image"
+                    class=""
+                    cover="true"
+                    lazy="true"
+                    sizes="
+                    {{ switch(
+                    (size == 'md') => '(min-width: 1280px) 640px, (min-width: 768px) 50vw, 90vw',
+                    () => '100vw'
+                    )}}
+                    "
+                    }}
+                    
+                </figure>
+                <h6 class="font-display text-[20px] leading-6 py-4" href="{{ url }}">{{ title }}</h6>
+                <span class="font-semibold uppercase flex justify-end group-hover:text-teal-200 group-hover:underline transition duration-300 ease-in-out">Read more</span>
+            </a>
+            {{ /items }}
+            {{ else }}
+                <div class="md:col-span-6">
+                    {{ trans:strings.no_results }}
+                </div>
+            {{ /unless }}
+            {{ partial:components/pagination class="md:col-span-12" }}
+        </div>
+        {{ /collection:blog }}
+    </section>
+    <!-- End: /blog/index.antlers.html -->
+{{ /section:index_content }}

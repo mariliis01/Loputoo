@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="{{ site:short_locale }}">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="title" content="Babycool">
+        <meta name="description" content="Babycool">
+        <meta name="theme-color" content="#98D6CE" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+        {{ vite src="resources/css/site.css|resources/js/site.js" }}
+        {{ partial:snippets/seo }}
+        {{ partial:snippets/browser_appearance }}
+    </head>
+    <body class="flex flex-col min-h-screen">
+        {{ partial:snippets/noscript }}
+        {{ partial:navigation/skip_to_content }}
+        {{ partial:components/toolbar }}
+        {{ yield:seo_body }}
+
+        {{ partial:layout/header }}
+        {{ template_content }}
+        {{ partial:layout/footer }}
+    </body>
+</html>
